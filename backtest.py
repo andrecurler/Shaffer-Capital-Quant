@@ -65,3 +65,12 @@ pd.DataFrame.from_dict(m_train, orient='index', columns=['train']).to_csv('metri
 pd.DataFrame.from_dict(m_test, orient='index', columns=['test']).to_csv('metrics_test.csv')
 sector_summary.to_csv('sector_contributions.csv')
 contr.head(10).to_csv('top_contributors.csv')
+
+# Save to Drive
+cum_test.to_csv(f"{drive_path}/cum_test.csv")
+cum_train.to_csv(f"{drive_path}/cum_train.csv")
+pd.DataFrame.from_dict(m_train, orient='index', columns=['train']).to_csv(f"{drive_path}/metrics_train.csv")
+pd.DataFrame.from_dict(m_test, orient='index', columns=['test']).to_csv(f"{drive_path}/metrics_test.csv")
+sector_summary.to_csv(f"{drive_path}/sector_contributions.csv")
+contr.head(10).to_csv(f"{drive_path}/top_contributors.csv")
+
